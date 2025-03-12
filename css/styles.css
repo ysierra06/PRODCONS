@@ -1,8 +1,8 @@
-:root {
+:root {          /*Barra de colores que seran utilizados*/
     color: black;
     color: white;    
-    --amarillo: #FFC107;
-    --blue: #0097A7;
+    color: #FFC107;
+    color: #0097A7;
     color: rgb(90, 61, 61);
     color: beige;
     color: rgb(12, 115, 12);
@@ -26,33 +26,132 @@ html{
 body{
     font-size: 16px; /* 1 rem = 10px */
     font-family: 'krub', sans-serif;
+}
 
+.tex1{
+    position: fixed;
+    color: #000;
+    top: 195px; /* Suma de la altura de ambas barras */
+    left: 0; /*alineacion a la izquierda*/
+    width: 100%;/*ancho que abarcara en la pagina principal*/
+    height: 60px;/*tamaño que abarcara el texto*/
+    display: flex;
+    justify-content: flex-start;
+    text-align: left; 
+    padding-left: 35px;
+    background-color: white; /*Color del fondo*/
+    font-size: 18px;
+    font-weight: bold;
+    align-items: center;/* texto centrado*/
+    z-index: 5; /* configurarlo debajo de la segunda barra */
+}
+
+.imagen-principal{
+    display: block;       /*  centrar */
+    width: 90%;           /* Define el ancho */
+    height: 500px;        /* Define la altura */
+    object-fit: cover;    /* Ajusta la imagen sin deformarla */
+    margin: 250px auto 0; /* Centrar y empujar hacia abajo */
+}
+
+.sobrecont{
+    position: relative;
+    text-align: center;
+}
+
+.cuadro-info{
+    position: absolute;
+    top: 55px; /* Ajusta el cuadro arriba de la imagen*/
+    left: 21.5%;
+    transform: translateX(-50%);/*Centrar el cuadro de manera horizontal*/
+    height: 340px; /*la altura del cuadrado*/
+    background-color: beige;/*color de fondo que contendra el cuadrado*/
+    color: black;/*color de las letras que contendra el texto añadido*/
+    font-size: 18px;/*Tamaño asignado de las letras*/
+    font-weight: bold;
+    display: flex;
+    align-items: center;/*posicionar el texto en el centro del cuadrado*/
+    justify-content: center;/*justificar el contenido al centro*/
+    display: flex;
+    flex-direction: column; /* Asegura que el texto esté arriba */
+    align-items: center; /* Centra el contenido */
+    text-align: justify; /* justifica el texto */
+    width: 30%; /* Ajusta el ancho si es necesario */
+    margin: auto; /* Centra en la página */
+    text-align-last: left;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+
+h2{
+    margin-bottom: 10px;/*definir el espacio entre el titulo y el texto de los cuadros*/
 }
 
 .container{
-    max-width: 120rem;
+    max-width: 120rem;/*tamaño maximo que podra tener el cuadrado*/
     margin: 0 auto;
 }
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    display: flex;
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    margin-bottom: 40px; /* Espaciado entre los elementos */
+}
+
+.info, .info2 {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.info-prod, .info-cons{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #f5f5f5;
+    margin-bottom: 20px;
+}
+
+.img-info1, .img-info2 {
+    width: 100%;
+    height: auto;
+}
+
+h2 {
+    color: #333;
+    font-size: 1.5em;
+}
+
+p {
+    color: #666;
+    font-size: 1em;
+}
+
 /*cabeza*/
 header{
     position: fixed;
-    top: 0;
+    top: 0;/*que tan separado estara del inicio*/
     left: 0;
-    width: 100%;
+    width: 100%;/*anchura que abarcara de la pantalla*/
     height: 80px;
     background: rgb(225, 216, 204);/*color del fondo*/
-    z-index: 2;
+    z-index: 2;/*mantenerlo fijo*/
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    padding-right: 20px;
+    padding-right: 20px;/*indicaremos cuanto lo justificaremos a la derecha*/
 
 }
 
 .header-contenedor{
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 15px;/*espacio definido entre columnas*/
     font-size: 16.1px;/* el tamaño negritas*/
     font-weight: bolder;
     justify-content: space-between;
@@ -62,20 +161,20 @@ header{
 .principal{
    display: flex;
    align-items: center;
-   gap: 30px;
-   
+   gap: 30px;/*espacio definido entre columnas*/
+   padding: 10px;
 }
 
 .telefono{
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 5px;/*espacio definido entre columnas*/
     color: black;
 }
 
 .telefono p{
     margin: 0;
-    color: black;
+    color: black;/*color que contendra el texto*/
 }
 
 @media (min-width: 768px) {
@@ -102,48 +201,88 @@ header{
     width: 45px; /* Ancho del círculo */
     height: 45px; /* Alto del círculo */
     border-radius: 50%; /* Hace el borde redondeado (círculo) */
-    border: 2px solid black;
+    border: 2px solid black;/*Define el borde de la imagen circular*/
 }
 /*Imagen del logo*/
 .logo{
-    top: 145px;
-    left: 20px;
-    display: flex;
+    top: 145px;/*define la altura que tendra la imagen*/
+    left: 20px;/*Indica cuanto estara a la derecha*/
+    display: flex;/*Se podra desplazar dependiendo el tamaño de la pantalla que sea utilizada*/
     align-items: center;
-    gap: 20px;
-    z-index: 2;
+    gap: 20px;/*espacio definido entre columnas*/
+    z-index: 2;/*mante a la imagen fija dentro del navegador*/
     padding-right: 20px;
     justify-content: flex-end;
     position: fixed;
    
 }
 .prodcons{
+    height: 200px; /*altura que le sera dada a la imagen */
     position: absolute;
-    top: 41px; /*espacio entre lo alto y bajo*/
-    left: 0.3px; /*cuanto estara a la izquierda*/
+    top: 42px; 
+    left: 0.3px; /*la justificacion izquierda que tendra*/
     display: flex;
-    align-items: center;
-    gap: 0.5px;
+    align-items: center;/*imagen centrada en el tamaño del navegador*/
+    gap: 2.5px;/*espacio definido entre columnas*/
     position: fixed;
-    padding: 0.5px;
-    width: 20%; /* tamaño de la imagen*/
+    padding: 5.5px;
+    width: 20%; /*tamaño asignado que abarcara de la pantalla*/
+
 }
 
 .logo{
-    width: .5%;
-    height: auto;
+    width: .5%;/*define el ancho*/
+    height: auto;/*define la altura*/
 }
 /*produccion y el consumo responsable*/
 .subtitulos{
-   display: flex;
-   flex-direction: column;
+    display: flex;
+    gap: 40px;/*espacio definido entre columnas*/
     align-items: center;  
-    font-size: 22px;/* tamaño de la letra*/
+    font-size: 20px;/* tamaño de la letra*/
     font-weight: bold;
-    color: black;
-    border-bottom: 100px solid black;
-
+    color: black;/*color que tendran las letras*/
+    position: relative;
+    z-index: 1;/*mantiene fijo a los subtitulos*/
+    transition: transform 0.3s ease-in-out;
+    text-align: right;/*subtitulos justificados a la derecha*/
 }
+
+.subtitulos.desolante{
+    transform: translateX(-150px);
+}
+
+.subtitulos li {
+    list-style: none;
+}
+
+.subtitulos a {
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+
+.subtitulos a::after {
+    content: '';
+    position: absolute;
+    bottom: -5.3px;
+    left: 0;
+    width: 100%;/*tamaño que abarcara de la pantalla*/
+    height: 7px; /*define la altura*/
+    background-color:  rgb(12, 115, 12);/*color de la linea que ira debajo de los subtitulos*/
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;/*tiempo que tomara en aparecer la linea debajo del subtitulo*/
+}
+
+.subtitulos a:hover::after,
+.subtitulos a:focus::after,
+.subtitulos a:active::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
 
 .subtitulos p{
     font-size: 1em;/*tamaño de letra*/
@@ -151,32 +290,70 @@ header{
     /*display: flex;  alinear elementos en fila*/
     padding: 5px;
     /*gap: 5px; espacio entre los elementos*/
-
 }
+
+.search-form {
+    position: relative;
+    z-index: 15;
+    margin-top: 5px;
+}
+
+.search-form input[type="search"] {
+    width: 0;
+    opacity: 0;
+    transition: width 0.3s ease, opacity 0.3s ease;
+    position: absolute;
+    right: 40px; /* Posición respecto a la lupa */
+    top: 50%;
+    transform: translateY(-50%);
+    border: 1px solid #000;
+    padding: 5px;
+    border-radius: 5px;
+    background: white;/*define el color del fondo que contendor*/
+}
+
+.search-form button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search-form:hover input[type="search"] {
+    width: 150px; /* Tamaño cuando se activa */
+    opacity: 1;
+}
+
 /*parte del logo*/
 section.logo{
     position: relative;
     width: 104.5%;
 }
 
-.subtitulos{
-    width: 110%;
-    border-bottom: 4px solid black;
-    padding-bottom: 2px;
-}
 /*elemento que van al final del blog*/
 .footer{
-    text-align: center;
-    color: black;
-
+    text-align: center;/*centra el texto*/
+    color: black;/*color de la letar*/
+    background-color: rgb(12, 115, 12);/*color de fondo que tendra el footer*/
+    width: 100%;/*define el ancho*/
+    height: 80px;/*define lo alto*/
+    display: flex;/*centra el contenido*/
+    justify-content: center;/*centra contenido horizontal*/
+    align-items: center;/*centra contenido vertical*/
+    padding: 0;/*se encarga de que no haya paddings no deceados*/
 }
+
+.footer > * {
+    background: transparent;
+}
+
+
 /*Menu de registro*/
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;/*define el tipo de letra que sera utilizada*/
 
 }
 
@@ -190,20 +367,20 @@ section.logo{
 
 .controls{
     /*background-color: rgb(172, 211, 146);*/
-    background-color: white; 
-    width: 170px;
+    background-color: white; /*define el color del fondo*/
+    width: 170px;/*define el ancho que abarcara en la pantalla*/
     padding: 10px;
     margin: auto;
     margin-top: 40px;
     border-radius: 5px;
     font-family: 'calibri';
     border-radius: 20px;
-    width: 80%;
-    text-align: black;
+    width: 80%; /*define el largo de los espacios para ingresar los datos*/
+    text-align: black;/*define de que color sera el texto*/
 }
 
 .login{
-    background-color: white;
+    background-color: transparent;
     padding: 20px;
     margin: auto;
     margin-top: 200px;
@@ -212,7 +389,7 @@ section.logo{
     border-radius: 30px;
     width: 455px;
     padding-top: 60px;
-     color: black;
+    color: black;
     
 }
 
@@ -230,14 +407,19 @@ section.logo{
 .header_2{
     display: flex;
     align-items: center;
-    gap: 55px;
-    font-size: 16.1px;/* el tamaño negritas*/
+    font-size: 16.1px; 
     background:white;/*color del fondo*/
-    z-index: 20;
-    justify-content: flex-end;
-    padding-right: 2px;
+    z-index: 10;
+    justify-content: space-between;
+    padding: 15px 20px;
     color: black;
     width: 100%;
+    border-bottom: 4px solid black;
+    position: fixed; /* Fija la barra */
+    top: 80px; /* La coloca en la parte superior */
+    left: 0; /* Alineación izquierda */
+    right: 0;
+    height: 115px;
 
 }
 
@@ -251,12 +433,19 @@ section.logo{
     margin-top: 4px;
     /*border-left-width: 0px;
     border-right-width: 0px;*/
-    color: rgb(79, 79, 79);
+    /*color: rgb(79, 79, 79);*/
+    color: black;
    
 }
 
 .C{
     background-color: rgb(172, 211, 146) ;
 }
+
+
+
+
+
+
 
 
