@@ -18,6 +18,7 @@
 html{
     font-size: 62.5%;
     box-sizing: border-box;
+    flex-direction: column*;
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -26,6 +27,7 @@ html{
 body{
     font-size: 16px; /* 1 rem = 10px */
     font-family: 'krub', sans-serif;
+    flex-direction: column;
 }
 
 .tex1{
@@ -68,7 +70,6 @@ body{
     background-color: beige;/*color de fondo que contendra el cuadrado*/
     color: black;/*color de las letras que contendra el texto añadido*/
     font-size: 18px;/*Tamaño asignado de las letras*/
-    font-weight: bold;
     display: flex;
     align-items: center;/*posicionar el texto en el centro del cuadrado*/
     justify-content: center;/*justificar el contenido al centro*/
@@ -80,6 +81,7 @@ body{
     margin: auto; /* Centra en la página */
     text-align-last: left;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    line-height: px;
 
 }
 
@@ -128,7 +130,7 @@ h2 {
 }
 
 p {
-    color: #666;
+     /*color: #666;*/
     font-size: 1em;
 }
 
@@ -330,22 +332,98 @@ section.logo{
 }
 
 /*elemento que van al final del blog*/
-.footer{
-    text-align: center;/*centra el texto*/
-    color: black;/*color de la letar*/
-    background-color: rgb(12, 115, 12);/*color de fondo que tendra el footer*/
-    width: 100%;/*define el ancho*/
-    height: 80px;/*define lo alto*/
-    display: flex;/*centra el contenido*/
-    justify-content: center;/*centra contenido horizontal*/
-    align-items: center;/*centra contenido vertical*/
-    padding: 0;/*se encarga de que no haya paddings no deceados*/
+.footer {
+    background: #0B4F14;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
 }
 
-.footer > * {
-    background: transparent;
+.footer {
+    background: #0B4F14;
+    color: white;
+    padding: 10px 0;
+    font-family: Arial, sans-serif;
+    height: 190px;
 }
 
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 2500px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    display:column;
+    width: 100%;
+}
+
+.footer-center{
+    max-width: 500px; /* Comprime el ancho del contenedor */
+    /*text-align: left; /* Alinea el texto a la izquierda */
+    padding: 0;
+    text-align: left 20px;
+    line-height: 33px;
+}
+
+.footer1  {
+    font-size: 35px; /* Ajusta el tamaño de la fuente para hacer el texto más comprimido */
+    line-height: 25px; /* Ajusta la altura de las líneas para que el texto esté más compacto */
+}
+.footer3, .footer-center, .footer2 {
+    flex: 1;
+    margin: 25px;
+    min-width: 100px;
+    font-size: 26px;
+}
+
+.prodcons2 {
+    width: 300px;
+    height: auto;
+    margin-bottom: 5.5px;
+}
+
+h4 {
+    margin: 0 0 10px;
+    font-weight: bold;
+    transform: translateY(-8px); /* Mueve el texto de 'SOBRE NOSOTROS' hacia arriba */
+}
+
+.pfooter .lf {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.ulfooter .lf .af {
+    color: rgb(192, 38, 38);
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.footer-bottom {
+    flex: 1;
+    margin: 1px;
+    min-width: -150px;
+    font-size: 15.5px;
+    text-align: right;
+    margin-top: -55px;
+    transform: translateX(-50px)
+    
+}
+
+.footer2{
+    line-height: 29.1px;
+    transform: translateX(80px);
+}
+
+.footer3{
+    line-height: 20px;
+}
 
 /*Menu de registro*/
 *{
@@ -438,9 +516,7 @@ section.logo{
    
 }
 
-.C{
-    background-color: rgb(172, 211, 146) ;
-}
+
 
 
 

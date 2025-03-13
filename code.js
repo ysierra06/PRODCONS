@@ -126,3 +126,10 @@ async function fetchPosts() {
 
 // Llamar a la función cuando se carga la página
 document.addEventListener('DOMContentLoaded', fetchPosts);
+
+fetch('footer.html')
+    .then(response => response.text())
+    .then(data => {
+        document.body.insertAdjacentHTML('beforeend', data);
+    })
+    .catch(error => console.error('Error cargando el footer:', error));
