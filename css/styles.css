@@ -18,7 +18,9 @@
 html{
     font-size: 62.5%;
     box-sizing: border-box;
-    flex-direction: column*;
+    flex-direction: column;
+    height: 100%;
+    margin: 0;
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -28,6 +30,9 @@ body{
     font-size: 16px; /* 1 rem = 10px */
     font-family: 'krub', sans-serif;
     flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin: 0;
 }
 
 .tex1{
@@ -92,7 +97,9 @@ h2{
 .container{
     max-width: 120rem;/*tamaño maximo que podra tener el cuadrado*/
     margin: 0 auto;
+    min-height: 100vh;
 }
+
 
 ul {
     list-style-type: none;
@@ -337,14 +344,9 @@ section.logo{
     color: white;
     padding: 10px 0;
     text-align: center;
-}
-
-.footer {
-    background: #0B4F14;
-    color: white;
-    padding: 10px 0;
     font-family: Arial, sans-serif;
     height: 190px;
+    margin-top: auto;
 }
 
 .footer-container {
@@ -354,27 +356,38 @@ section.logo{
     max-width: 2500px;
     margin: 0 auto;
     flex-wrap: wrap;
-    display:column;
     width: 100%;
+}
+
+.af{
+    max-width: 500px; /* Comprime el ancho del contenedor */
+    /*text-align: left; /* Alinea el texto a la izquierda */
+    padding: 0;
+    text-align: justify;
+    line-height: 15px;
+    color: white;
+    font-size: 20px;
 }
 
 .footer-center{
     max-width: 500px; /* Comprime el ancho del contenedor */
     /*text-align: left; /* Alinea el texto a la izquierda */
     padding: 0;
-    text-align: left 20px;
-    line-height: 33px;
+    text-align: left;
+    line-height: 18px;
+    padding-top: 10px;/*mover el texto para abajo*/
 }
 
 .footer1  {
-    font-size: 35px; /* Ajusta el tamaño de la fuente para hacer el texto más comprimido */
-    line-height: 25px; /* Ajusta la altura de las líneas para que el texto esté más compacto */
+    text-align: justify;
+    font-size: 16px; /* Ajusta el tamaño de la fuente para hacer el texto más comprimido */
+    line-height: 26px; /* Ajusta la altura de las líneas para que el texto esté más compacto */
 }
 .footer3, .footer-center, .footer2 {
     flex: 1;
     margin: 25px;
     min-width: 100px;
-    font-size: 26px;
+    font-size: 25px;
 }
 
 .prodcons2 {
@@ -394,35 +407,41 @@ h4 {
     font-size: 0.9rem;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-}
+
 
 .ulfooter .lf .af {
-    color: rgb(192, 38, 38);
     text-decoration: none;
-    font-size: 1rem;
+    font-size: 15px;
+    line-height: 1px;
+    padding-top: 8px;
 }
+
+.footer2{
+    line-height: 15px;
+    transform: translateX(80px);
+    font-size: 26px;
+}
+
+.footer3{
+    line-height: 20px;
+}
+
+.cfooter{
+    font-size: 20px;
+    padding-top: 15px;
+    text-align: left;
+}
+
 
 .footer-bottom {
     flex: 1;
     margin: 1px;
     min-width: -150px;
-    font-size: 15.5px;
+    font-size: 17.4px;
     text-align: right;
-    margin-top: -55px;
-    transform: translateX(-50px)
+    margin-top: -70px;
+    transform: translateX(-22px)
     
-}
-
-.footer2{
-    line-height: 29.1px;
-    transform: translateX(80px);
-}
-
-.footer3{
-    line-height: 20px;
 }
 
 /*Menu de registro*/
